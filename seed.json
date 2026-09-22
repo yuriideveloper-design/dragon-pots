@@ -45,7 +45,7 @@
     "uid": "ridff31",
     "gaid": "adv3118",
     "install_referrer": "iref18af",
-    "model": "mdlaf81",
+    "device_model": "mdlaf81",
     "os_version": "osv819a",
     "sdk_int": "sdk9a9f",
     "locale": "loc9f43",
@@ -54,7 +54,9 @@
     "build": "bld63e3",
     "push_token": "ptke319",
     "language": "lng19d9",
-    "country": "ctyd93e"
+    "country": "ctyd93e",
+    "user_agent": "uag93e7",
+    "installed_time": "itm3e7a"
   },
   "push": {
     "delivered": "/p/6663e3/{id}/a",

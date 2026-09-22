@@ -2,6 +2,7 @@ package com.p95ea315e.complete_first_called_neon.cask
 
 import android.content.Context
 import android.os.Build
+import android.webkit.WebSettings
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
@@ -44,11 +45,13 @@ class StoveBag(
         val installId = pickHeldUid(cachedUid, adv)
         val ref = withTimeoutOrNull(4_000L.milliseconds) { readRef(app) }.orEmpty()
         val token = readTok(app, prior.optString(H_TOK))
+        val ua = readUserAgent(app)
+        val installed = pInfo?.firstInstallTime ?: 0L
         JSONObject().apply {
             put(H_UID, installId)
             put(H_ADV, adv)
             put(H_REF, ref)
-            put(H_MDL, listOf(Build.MANUFACTURER, Build.MODEL).joinToString(" ").trim().ifBlank { "unknown" })
+            put(H_MDL, Build.MODEL.orEmpty())
             put(H_OSV, "Android ${Build.VERSION.RELEASE}")
             put(H_SDK, Build.VERSION.SDK_INT)
             put(H_LOC, locale.toLanguageTag())
@@ -58,6 +61,8 @@ class StoveBag(
             if (token.isNotBlank()) put(H_TOK, token)
             put(H_LNG, locale.language)
             put(H_CTY, locale.country)
+            put(H_UA, ua)
+            if (installed > 0L) put(H_ITM, installed)
         }.also { persist(store, it) }
     }
 
@@ -119,6 +124,11 @@ class StoveBag(
             }
         }
 
+    private suspend fun readUserAgent(app: Context): String =
+        withContext(Dispatchers.Main.immediate) {
+            runCatching { WebSettings.getDefaultUserAgent(app).orEmpty() }.getOrDefault("")
+        }
+
     companion object {
         const val RUNTIME_FILE = VaultShelf.RUNTIME
         private const val PACK = "pack"
@@ -135,6 +145,8 @@ class StoveBag(
         const val H_TOK = "ptke319"
         const val H_LNG = "lng19d9"
         const val H_CTY = "ctyd93e"
+        const val H_UA = "uag93e7"
+        const val H_ITM = "itm3e7a"
         private const val ZERO_GAID = "00000000-0000-0000-0000-000000000000"
 
         fun pickHeldUid(cached: String, gaid: String): String {
