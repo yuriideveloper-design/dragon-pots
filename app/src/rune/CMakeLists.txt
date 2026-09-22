@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(runekelt)
+add_library(runekelt SHARED rune.cpp)
+target_compile_options(runekelt PRIVATE -fvisibility=hidden)
+target_link_options(runekelt PRIVATE "-Wl,-z,max-page-size=16384")

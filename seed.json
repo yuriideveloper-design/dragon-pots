@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "app": {
+    "application_id": "com.p95ea315e.complete_first_called_neon",
+    "platform": "android"
+  },
+  "seed": {
+    "nonce": "633fb0a4-33ce-4522-b9c4-ae042a9be956",
+    "created_at": "2026-09-21T20:46:55.988Z"
+  },
+  "identity": {
+    "worker_host": "neonsynddrift.shop",
+    "slug": "completefirs56",
+    "channel": "completefirs56_alerts"
+  },
+  "surface": {
+    "product": "complete first called neon",
+    "label": "Complete First Called Neon",
+    "tokens": [
+      "complete",
+      "first",
+      "called",
+      "neon"
+    ]
+  },
+  "hop": {
+    "method": "PATCH",
+    "path": "/go/ff3118",
+    "envelope": "body",
+    "header_names": [
+      "X-af81-H0",
+      "X-819a-H1"
+    ],
+    "crypto": "aes-256-cbc"
+  },
+  "verdict": {
+    "state": "brim",
+    "href": "quay",
+    "sticky": "moor",
+    "ttl": "span",
+    "pass": "p81",
+    "off": "n9a"
+  },
+  "collect": {
+    "uid": "ridff31",
+    "gaid": "adv3118",
+    "install_referrer": "iref18af",
+    "model": "mdlaf81",
+    "os_version": "osv819a",
+    "sdk_int": "sdk9a9f",
+    "locale": "loc9f43",
+    "timezone": "tzn4366",
+    "app_version": "avn6663",
+    "build": "bld63e3",
+    "push_token": "ptke319",
+    "language": "lng19d9",
+    "country": "ctyd93e"
+  },
+  "push": {
+    "delivered": "/p/6663e3/{id}/a",
+    "opened": "/p/6663e3/{id}/b"
+  },
+  "webview": {
+    "js_name": "Jse319",
+    "js_methods": [
+      "putd9",
+      "ping3e"
+    ],
+    "ua_strip": [
+      "Version/"
+    ],
+    "stealth": [
+      "webdriver"
+    ]
+  },
+  "http": {
+    "client": "ktor",
+    "async": "work"
+  },
+  "manifest": {
+    "provider_suffix": "c80b",
+    "queries": "minimal",
+    "download_channel": "completefirs56_dl"
+  },
+  "rewrite": {
+    "module_shape": "app_plus_surface",
+    "boot_style": "single_activity",
+    "folders": [
+      "cask",
+      "pin",
+      "hull"
+    ],
+    "storage": "encrypted_prefs",
+    "storage_names": [
+      "completefirs56_runtime",
+      "completefirs56_surface"
+    ],
+    "boot_cut": [
+      "stamp",
+      "post",
+      "branch",
+      "surface"
+    ]
+  },
+  "fcm": {
+    "id_keys": [
+      "chime_id"
+    ],
+    "url_keys": [
+      "open_href"
+    ]
+  },
+  "flags": {
+    "r8": true,
+    "cleartext": true,
+    "warmup_ms": 2152,
+    "response_legacy_aliases": [],
+    "veil_mask_format": "completefirs56.k.9f43"
+  },
+  "frozen": {
+    "upstream": "POST /click-handler",
+    "collection": "org-standard",
+    "webview": "org-standard"
+  }
+}

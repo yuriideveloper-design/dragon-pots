@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791799080848",
+    "project_id": "neon-drift-syndicate",
+    "storage_bucket": "neon-drift-syndicate.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791799080848:android:b1300cc0be527aaf137515",
+        "android_client_info": {
+          "package_name": "com.p95ea315e.complete_first_called_neon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKBydi5pdGS2Sc2AQxMQgcVns5o2WnknE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
